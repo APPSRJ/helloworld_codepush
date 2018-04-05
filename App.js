@@ -9,7 +9,8 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  Button
 } from 'react-native';
 
 import codePush from 'react-native-code-push';
@@ -25,6 +26,10 @@ let codePushOptions = { checkFrequency: codePush.CheckFrequency.MANUAL };
 class App extends Component {
 
   componentDidMount() {
+
+  }
+
+  checkForUpdates = () => {
     codePush.sync({
       updateDialog: true,
       installMode: codePush.InstallMode.IMMEDIATE
@@ -36,8 +41,8 @@ class App extends Component {
       <View style={styles.container}>
         <Text style={styles.welcome}>
           Welcome to React Code push!
-          You got the latest changes
         </Text>
+        <Button title="check for updates" onPress={this.checkForUpdates} />
       </View>
     );
   }
