@@ -41,6 +41,7 @@ class App extends Component {
       <View style={styles.container}>
         <Text style={styles.welcome}>
           Welcome to React Code push!
+          You got something
         </Text>
         <Button title="check for updates" onPress={this.checkForUpdates} />
       </View>
