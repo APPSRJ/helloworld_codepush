@@ -40,8 +40,7 @@ class App extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Code push!
-          You got something
+          Its my second code push
         </Text>
         <Button title="check for updates" onPress={this.checkForUpdates} />
       </View>
