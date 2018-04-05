@@ -36,6 +36,7 @@ class App extends Component {
       <View style={styles.container}>
         <Text style={styles.welcome}>
           Welcome to React Code push!
+          You got the latest changes
         </Text>
       </View>
     );
