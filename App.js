@@ -35,7 +35,7 @@ class App extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          Welcome to React Code push!
         </Text>
       </View>
     );
