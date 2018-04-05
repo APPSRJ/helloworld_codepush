@@ -12,6 +12,8 @@ import {
   View
 } from 'react-native';
 
+import codePush from 'react-native-code-push';
+
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
     'Cmd+D or shake for dev menu',
@@ -19,10 +21,15 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
+let codePushOptions = { checkFrequency: codePush.CheckFrequency.MANUAL };
+class App extends Component {
 
-export default class App extends Component {
-
-  
+  componentDidMount() {
+    codePush.sync({
+      updateDialog: true,
+      installMode: codePush.InstallMode.IMMEDIATE
+    });
+  }
 
   render() {
     return (
@@ -53,3 +60,7 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
+
+App = codePush(codePushOptions)(App);
+
+export default App;
