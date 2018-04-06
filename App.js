@@ -40,7 +40,7 @@ class App extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Its my second code push
+          There is aa new conet
         </Text>
         <Button title="check for updates" onPress={this.checkForUpdates} />
       </View>
